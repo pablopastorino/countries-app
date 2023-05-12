@@ -1,0 +1,17 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <input matInput type="text" placeholder="Country Name" formControlName="searchInput">
+    <mat-icon matPrefix>travel_explore</mat-icon>
+    <mat-hint>Type and search</mat-hint>
+    <button *ngIf="searchForm.controls['searchInput']" matSuffix mat-icon-button aria-label="Clear"
+      (click)="searchForm.reset()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-stroked-button color="primary" type="submit">
+    <mat-icon>search</mat-icon>
+    Search
+  </button>
+</form>
+<app-list *ngIf="countries?.length" [countries]="countries"></app-list>
+<div class="no-found" *ngIf="!countries?.length && searchForm.touched">No results found</div>

@@ -1,0 +1,36 @@
+$layout-breakpoint-small: 500px
+
+:host
+  border: 3px solid #f1f3f4
+  border-radius: 3rem
+  padding: 2rem
+
+form
+  align-items: center
+  display: flex
+  height: 10rem
+  justify-content: center
+  @media (max-width: $layout-breakpoint-small)
+    flex-direction: column
+  
+mat-form-field
+  margin-right: 1rem
+  width: 50vw
+
+.mat-form-field
+  &-flex
+    background: white !important
+  &-prefix
+    margin-right: 1rem
+
+button[type="submit"]
+  font-size: 1.2rem
+  height: 3rem
+
+.no-found
+  background: #f1f3f4
+  border: 1px solid #f1f3f4
+  border-radius: 0.33rem
+  display: flex
+  justify-content: center
+  padding: 1rem
