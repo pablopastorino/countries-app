@@ -1,7 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { DataService } from '../services/data.service';
+
 import { Country } from '../types/country';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-countries',

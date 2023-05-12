@@ -4,11 +4,11 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Observable, of } from 'rxjs';
 
 import { CountriesComponent } from './countries.component';
 import { DataService } from '../services/data.service';
 import { MaterialModule } from '../material/material.module';
-import { Observable, of } from 'rxjs';
 import { Country } from '../types/country';
 
 describe('CountriesComponent', () => {
